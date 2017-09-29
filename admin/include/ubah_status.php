@@ -9,7 +9,7 @@
 <hr>
 
       <?php
-        $query_updt = mysqli_query($conn,"SELECT a.*, b.* FROM maintenance a, admin b WHERE id_maintenance='$id_maintenance' AND b.nama_admin=a.id_pegawai");
+        $query_updt = mysqli_query($conn,"SELECT a.*, b.* FROM maintenance a, admin b WHERE id_maintenance='$id_maintenance' AND b.username=a.id_pegawai");
         if ($query_updt) {
           if (mysqli_num_rows($query_updt)>0) {
             $rows = mysqli_fetch_array($query_updt);
