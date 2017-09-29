@@ -3,7 +3,7 @@
 //Pengaturan database
 $database	= "remainder2";
 $host		= "localhost";
-$pass		= "";
+$pass		= "secret";
 $username	= "root";
 
 

@@ -42,7 +42,8 @@
         </tfoot>
         <tbody>
 		<?php
-		$query = mysqli_query($conn,"SELECT a.*,b.* FROM maintenance a, admin b WHERE a.id_pegawai=b.nama_admin ORDER BY  id_maintenance DESC");
+        //Menghilangkan where condition WHERE a.id_pegawai=b.nama_admin
+		$query = mysqli_query($conn,"SELECT a.*,b.* FROM maintenance a, admin b WHERE a.id_pegawai=b.username ORDER BY  id_maintenance DESC");
 
 		if ($query) {
 			if (mysqli_num_rows($query)>0) {
