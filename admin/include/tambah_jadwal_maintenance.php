@@ -59,10 +59,14 @@
                       <label for="sel1">Periode Maintenance</label>
                       <select name="periode" id="" class="form-control">
                         <option value="" disabled selected>-- Pilih Periode --</option>
-                        <option value="1">Per 1 Bulan</option>
-                        <option value="3">Per 3 Bulan</option>
-                        <option value="6">Per 6 Bulan</option>
-                        <option value="12">Per 12 Bulan</option>
+                        <option value="Per 1 Bulan">Per 1 Bulan</option>
+                        <option value="Per 3 Bulan">Per 3 Bulan</option>
+                        <option value="Per 6 Bulan">Per 6 Bulan</option>
+                        <option value="Per 12 Bulan">Per 12 Bulan</option>
+                        <option value="" disabled="disabled">─────────────────────────</option>
+                        <option value="Per 1 Minggu">Per 1 Minggu</option>
+                        <option value="Per 2 Minggu">Per 2 Minggu</option>
+                        <option value="Per 3 Minggu">Per 3 Minggu</option>
                       </select>
                     </div>
                     <div class="form-group">

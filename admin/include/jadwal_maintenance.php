@@ -54,7 +54,7 @@
             <tr>
                 <td><?php echo $no; ?></td>
                 <td><?php echo $rows['id_jadwal']; ?></td>
-                <td><?php echo "Per ".$rows['periode']." bulan"; ?></td>
+                <td><?php echo $rows['periode']; ?></td>
                 <td><?php echo $rows['hari']; ?></td>
                 <td><?php echo $rows['waktu_perawatan']." Jam"; ?></td>
                 <td><?php echo $rows['id_alat']; ?></td>

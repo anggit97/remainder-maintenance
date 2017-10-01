@@ -12,7 +12,7 @@ $pdf = new PDF_MC_Table();
 $pdf->AliasNbPages();
 $pdf->AddPage();
 
-$sql = mysqli_query($conn,"SELECT a.*,b.* FROM maintenance a, admin b where id_maintenance='$id_maintenance' AND b.nama_admin=a.id_pegawai");
+$sql = mysqli_query($conn,"SELECT a.*,b.* FROM maintenance a, admin b where id_maintenance='$id_maintenance' AND b.username=a.id_pegawai");
 if ($sql) {
   $rows = mysqli_fetch_array($sql);
 }

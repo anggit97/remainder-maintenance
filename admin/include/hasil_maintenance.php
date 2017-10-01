@@ -42,7 +42,7 @@
         </tfoot>
         <tbody>
 		<?php
-		$query = mysqli_query($conn,"SELECT a.*,b.* FROM maintenance a, admin b WHERE a.id_pegawai=b.nama_admin AND a.status='servis' ORDER BY  id_maintenance DESC");
+		$query = mysqli_query($conn,"SELECT a.*,b.* FROM maintenance a, admin b WHERE a.id_pegawai=b.username AND a.status='servis' ORDER BY  id_maintenance DESC");
 		if ($query) {
 			if (mysqli_num_rows($query)>0) {
 				$no = 1;

@@ -33,7 +33,7 @@ if (isset($_POST['login'])) {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Login Administrator Maintenance</title>
+	<title>Remainder Maintenance | Login SPV</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style2.css">
 	<script src="js/jquery-3.2.1.js"></script>
