@@ -1,26 +1,11 @@
-﻿# Host: localhost  (Version: 5.6.25)
-# Date: 2017-09-29 05:55:36
-# Generator: MySQL-Front 5.2  (Build 5.66)
+# Host: localhost  (Version 5.6.21)
+# Date: 2017-10-01 12:06:27
+# Generator: MySQL-Front 5.3  (Build 5.39)
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE */;
-/*!40101 SET SQL_MODE='NO_ENGINE_SUBSTITUTION' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES */;
-/*!40103 SET SQL_NOTES='ON' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS */;
-/*!40014 SET FOREIGN_KEY_CHECKS=0 */;
-
-DROP DATABASE IF EXISTS `remainder2`;
-CREATE DATABASE `remainder2` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `remainder2`;
+/*!40101 SET NAMES latin1 */;
 
 #
-# Source for table "admin"
+# Structure for table "admin"
 #
 
 DROP TABLE IF EXISTS `admin`;
@@ -38,10 +23,10 @@ CREATE TABLE `admin` (
 # Data for table "admin"
 #
 
-INSERT INTO `admin` VALUES ('admin1','Laeliyah Admin','$2y$10$hC1QLQKxuKvVLKrRnupt.eqOif.HyrXLRQUuGoh4.ZSjzmWYlvCO.','tangerang','laeli@gmail.com','Administrator'),('administrator','administrator','$2y$10$IvWWnIAI.rSuy86.QWfYye3dETdsD2bVk3i3EzTPEh/ozYFdDeak6','administrator','a@gmail','Administrator'),('agus','agus','$2y$10$seWsSWm0rD.7lMecfaGqoORLs/TqZsxkMnj7LQE0syw/7SQNIxD0K','agus','agus@gmail','Administrator'),('maintenance','Santo','$2y$10$BJRK2pWBU1.EgYqfM.BHMu3uwLv2tDk4wJLk05i.bUNAS2za3q0rK','pondok pinang','santo@gmail.com','Staff Maintenance'),('produksi','Chiko Staff Produksi','$2y$10$BJRK2pWBU1.EgYqfM.BHMu3uwLv2tDk4wJLk05i.bUNAS2za3q0rK','ciledug','chiko@gmail.com','Staff Produksi'),('spv','Firdan SPV','$2y$10$imAX2UB2hUIKK6Ll3tpzJuOsk539Ea1VnDi7Y1IhhLL8cRjiba93a','pondok ranji','fdn@gmail.com','SPV'),('tono','Tono Calan','$2y$10$DuRI7WufoAU4LQmeu7bmNuaGyC4xS2whfHCX4KvJI8WxeQNVeOlEK','pondok kacang','tono@gmail.com','Staff Maintenance');
+INSERT INTO `admin` VALUES ('admin1','Laeliyah Admin','$2y$10$hC1QLQKxuKvVLKrRnupt.eqOif.HyrXLRQUuGoh4.ZSjzmWYlvCO.','tangerang','laeli@gmail.com','Administrator'),('administrator','administrator','$2y$10$IvWWnIAI.rSuy86.QWfYye3dETdsD2bVk3i3EzTPEh/ozYFdDeak6','administrator','a@gmail','Administrator'),('agus','agus','$2y$10$seWsSWm0rD.7lMecfaGqoORLs/TqZsxkMnj7LQE0syw/7SQNIxD0K','agus','agus@gmail','Administrator'),('apw22','Apw','$2y$10$rcvBePgCnYo53NIJJtFA0u.25LQwyKe.MPtzSNgKc.5Ga7Cz2B6kO','Tangeran','apw22@gmail.com','Staff Produksi'),('apw_maintenance','apw maintenance','$2y$10$KVSn1QiNkaEAb.l6M/46UOdXXWwuN3axIHSr1wvFfavizoDOe1kbi','tangerang','apw@gmail.com','Staff Maintenance'),('apw_spv','apw_spv','$2y$10$8CEkRipuqeMnKbAS2/tizeCaUZB9y4KLVt9T9N/4S79NCa.sLOxDy','tangerang','apw22@gmail.com','SPV'),('maintenance','Santo','$2y$10$BJRK2pWBU1.EgYqfM.BHMu3uwLv2tDk4wJLk05i.bUNAS2za3q0rK','pondok pinang','santo@gmail.com','Staff Maintenance'),('mnt','mnt','$2y$10$I.4cV4bKgUuxhkvDAdJK1ObGW.J9ZMt2g5nFf6UgCQgdwHalU/iSK','mnt','mnt@gmail.com','Staff Maintenance'),('produksi','Chiko Staff Produksi','$2y$10$BJRK2pWBU1.EgYqfM.BHMu3uwLv2tDk4wJLk05i.bUNAS2za3q0rK','ciledug','chiko@gmail.com','Staff Produksi'),('spv','Firdan SPV','$2y$10$imAX2UB2hUIKK6Ll3tpzJuOsk539Ea1VnDi7Y1IhhLL8cRjiba93a','pondok ranji','fdn@gmail.com','SPV'),('tono','Tono Calan','$2y$10$DuRI7WufoAU4LQmeu7bmNuaGyC4xS2whfHCX4KvJI8WxeQNVeOlEK','pondok kacang','tono@gmail.com','Staff Maintenance');
 
 #
-# Source for table "alat"
+# Structure for table "alat"
 #
 
 DROP TABLE IF EXISTS `alat`;
@@ -56,10 +41,10 @@ CREATE TABLE `alat` (
 # Data for table "alat"
 #
 
-INSERT INTO `alat` VALUES ('A0001','Mesin 1','Keterangan Alat 1'),('A0002','Mesin 2','Keterangan Alat 2'),('A0003','Mesin 3','Keterangans 3');
+INSERT INTO `alat` VALUES ('A0001','Mesin 1','Keterangan Alat 1'),('A0002','Mesin 2','Keterangan Alat 2'),('A0003','Mesin 3','Keterangans 3'),('A0004','Alat4','Keterangan Alat4'),('A0005','Alat 5','Keterangan alat 5');
 
 #
-# Source for table "alat_kerusakan"
+# Structure for table "alat_kerusakan"
 #
 
 DROP TABLE IF EXISTS `alat_kerusakan`;
@@ -70,16 +55,16 @@ CREATE TABLE `alat_kerusakan` (
   `id_kerusakan` char(5) DEFAULT NULL,
   `solusi` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_ka`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "alat_kerusakan"
 #
 
-INSERT INTO `alat_kerusakan` VALUES (1,'M0001','A0001','K0001','Kerusakan 1'),(2,'M0001','A0002','K0002','Kerusakan 2'),(3,'M0001','A0003','K0001','solusi 1'),(4,'M0002','A0001','K0001','belibaru'),(5,'M0002','A0002','K0006','servis'),(6,'M0002','A0003','K0003','Kerusakan Aja'),(7,'M0002','A0002','K0005','servis'),(8,'M0003','A0002','K0002','sd'),(9,'M0003','A0001','K0002','dscd'),(10,'M0004','A0001','K0001','cek1');
+INSERT INTO `alat_kerusakan` VALUES (16,'M0001','A0001','K0001','servis'),(17,'M0001','A0002','K0003','belibaru');
 
 #
-# Source for table "jadwal"
+# Structure for table "jadwal"
 #
 
 DROP TABLE IF EXISTS `jadwal`;
@@ -97,10 +82,10 @@ CREATE TABLE `jadwal` (
 # Data for table "jadwal"
 #
 
-INSERT INTO `jadwal` VALUES ('J0001','6','selasa',2,'A0003','2017'),('J0002','1','senin',1,'A0001','2017'),('J0003','3','kamis',2,'A0002','2017');
+INSERT INTO `jadwal` VALUES ('J0001','Per 6 Bulan','rabu',3,'A0003','2017'),('J0002','Per 6 Bulan','rabu',3,'A0004','2017'),('J0003','Per 6 Bulan','kamis',3,'A0004','2017'),('J0004','Per 1 Minggu','senin',1,'A0002','2017');
 
 #
-# Source for table "kerusakan"
+# Structure for table "kerusakan"
 #
 
 DROP TABLE IF EXISTS `kerusakan`;
@@ -119,7 +104,7 @@ CREATE TABLE `kerusakan` (
 INSERT INTO `kerusakan` VALUES ('K0001','Kerusakan 1','Desc Kerusakan 1','belum diproses'),('K0002','Kerusakan 1','Deskripsi 1','belum diproses'),('K0003','Kerusakan 2','Deskripsi 2','belum diproses'),('K0004','Kerusakan 1','Deskripsi 1','belum diproses'),('K0005','Konslet','Beli Aja','belum diproses'),('K0006','Kerusakan 1','Servis 1','belum diproses'),('K0007','Kerusakan 2','','belum diproses');
 
 #
-# Source for table "maintenance"
+# Structure for table "maintenance"
 #
 
 DROP TABLE IF EXISTS `maintenance`;
@@ -136,10 +121,10 @@ CREATE TABLE `maintenance` (
 # Data for table "maintenance"
 #
 
-INSERT INTO `maintenance` VALUES ('M0001','2017-06-20','Chiko Staff Produksi','2017-06-22','servis'),('M0002','2017-06-21','Chiko Staff Produksi','2017-06-30','servis'),('M0003','2017-08-04','produksi','','Belum Diproses'),('M0004','2017-09-29','produksi','','Belum Diproses');
+INSERT INTO `maintenance` VALUES ('M0001','2017-10-01','apw22','2017-10-03','servis');
 
 #
-# Source for table "pegawai"
+# Structure for table "pegawai"
 #
 
 DROP TABLE IF EXISTS `pegawai`;
@@ -156,11 +141,3 @@ CREATE TABLE `pegawai` (
 #
 
 INSERT INTO `pegawai` VALUES ('P0001','Ari Hermawan','Sepatan Timur','0821233312232'),('P0002','Arif ','Ciledug','0287812035533'),('P0003','Pegawai 1','Alamat Pegawai 1','09029129892');
-
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
