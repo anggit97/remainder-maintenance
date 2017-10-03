@@ -39,4 +39,5 @@ include '../../koneksi/conn.php';
     <label for="sel1">Keterangan Kerusakan</label>
     <textarea name="keterangan_1" id="keterangan" class="form-control" placeholder="Keterangan Kerusakan" cols="30" rows="10" required></textarea>
   </div>
+
 </div>

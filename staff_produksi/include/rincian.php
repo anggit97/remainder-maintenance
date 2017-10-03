@@ -72,6 +72,22 @@
             <label for="sel1">Tanggal Maintenance</label>
             <input type="date" class="form-control" name="tgl_maintenance" id="tgl_maintenance" placeholder="Tanggal Maintenance Selanjutnya" value="<?php echo $rows['tgl_maintenance_selanjutnya']?>" readonly="readonly">
           </div>
+          <div class="form-group">
+            <label for="sel1">Jadwal Maintenance</label>
+            <select name="id_jadwal" id="id_jadwal" class="form-control" required>
+              <option value="">-- Pilih Periode Jadwal Maintenance --</option>
+              <?php
+              $sqli = mysqli_query($conn,"SELECT * FROM jadwal");
+               if (mysqli_num_rows($sqli) > 0) {
+                 if ($sqli) {
+                   while ($jad = mysqli_fetch_array($sqli)) {
+                     echo "<option value='$jad[id_jadwal]'>$jad[periode]</option>";
+                   }
+                 }else echo mysqli_error($conn);
+               }else echo mysqli_error($conn);
+              ?>
+            </select>
+          </div>
       </div>
 
       <hr>
@@ -107,7 +123,7 @@
                        if (mysqli_num_rows($sqli) > 0) {
                          if ($sqli) {
                            while ($peg = mysqli_fetch_array($sqli)) {
-                             echo "<option value='$peg[id_kerusakan]'>$peg[nama_kerusakan] - $peg[id_kerusakan]</option>";
+                             echo "<option value='$peg[id_kerusakan]'>$peg[nama_kerusakan] - ID ($peg[id_kerusakan])</option>";
                            }
                          }else echo mysqli_error($conn);
                        }else echo mysqli_error($conn);
@@ -118,6 +134,7 @@
                     <label for="sel1">Keterangan Kerusakan</label>
                     <textarea name="keterangan_0" id="keterangan" class="form-control" placeholder="Keterangan Kerusakan" cols="30" rows="10" required></textarea>
                   </div>
+                  
                   <input type="hidden" value="0" id="count" name="count">
                 </div>
               </div>
@@ -143,7 +160,11 @@ if (isset($_POST['submit'])) {
     ${$key} = $value;
   }
 
-  $sql = mysqli_query($conn,"INSERT INTO maintenance VALUES('$kode2','$tgl_pengajuan_maintenance','$id_pegawai','$tgl_maintenance','Belum Diproses')");
+  if ($id_jadwal == "") {
+    echo "<script>alert('Jadwal Maintenance Tidak Boleh Kosong!')</script>";
+  }
+  
+  $sql = mysqli_query($conn,"INSERT INTO maintenance VALUES('$kode2','$tgl_pengajuan_maintenance','$id_pegawai','$tgl_maintenance','Belum Diproses','$id_jadwal')");
 
   $val = 0;
   for ($i=0; $i <= $count; $i++) {
@@ -151,7 +172,7 @@ if (isset($_POST['submit'])) {
     $x =  ${'id_alat_' . $i};
     $y =  ${'id_kerusakan_' . $i};
     $z =  ${'keterangan_' . $i};
-
+    
     $sql2 = mysqli_query($conn,"INSERT INTO alat_kerusakan VALUES(null,'$kode2','$x','$y','$z')");
     if ($sql2) {
       $val++;

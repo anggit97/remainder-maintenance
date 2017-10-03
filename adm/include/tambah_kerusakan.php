@@ -52,10 +52,10 @@
                 </div>
                 <div class="box-body">
                   <form action="#" method="post">
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label for="sel1">ID Kerusakan</label>
                       <input type="text" class="form-control" readonly="readonly" name="id_customer" placeholder="ID Customer" value="<?php echo $kode2; ?>">
-                    </div>
+                    </div> -->
                     <div class="form-group">
                       <label for="sel1">Nama Kerusakan</label>
                       <input type="text" class="form-control" name="nm_customer" placeholder="Nama Kerusakan">
@@ -84,7 +84,7 @@
                   }elseif ($deskripsi == "") {
                     echo "<script>alert('Deskripsi Kerusakan tidak Boleh kosong')</script>";
                   }else{
-                    $query = mysqli_query($conn,"INSERT INTO kerusakan VALUES('$id_customer','$nm_customer','$deskripsi','')"); 
+                    $query = mysqli_query($conn,"INSERT INTO kerusakan VALUES(null,'$nm_customer','$deskripsi','')"); 
                     if ($query) {
                       echo "<script>alert('Berhasil Tambah Data Kerusakan')</script>";
                       echo "<script>window.location='index.php?page=14'</script>";

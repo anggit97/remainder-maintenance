@@ -1,5 +1,5 @@
 # Host: localhost  (Version 5.6.21)
-# Date: 2017-10-01 12:06:27
+# Date: 2017-10-03 20:47:31
 # Generator: MySQL-Front 5.3  (Build 5.39)
 
 /*!40101 SET NAMES latin1 */;
@@ -52,16 +52,16 @@ CREATE TABLE `alat_kerusakan` (
   `id_ka` int(11) NOT NULL AUTO_INCREMENT,
   `id_maintenance` char(5) NOT NULL DEFAULT '',
   `id_alat` char(5) DEFAULT NULL,
-  `id_kerusakan` char(5) DEFAULT NULL,
+  `id_kerusakan` int(5) DEFAULT NULL,
   `solusi` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_ka`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "alat_kerusakan"
 #
 
-INSERT INTO `alat_kerusakan` VALUES (16,'M0001','A0001','K0001','servis'),(17,'M0001','A0002','K0003','belibaru');
+INSERT INTO `alat_kerusakan` VALUES (29,'M0001','A0001',0,'servis'),(30,'M0001','A0002',0,'belibaru'),(31,'M0002','A0001',9,'servis'),(32,'M0002','A0002',9,'belibaru');
 
 #
 # Structure for table "jadwal"
@@ -82,7 +82,7 @@ CREATE TABLE `jadwal` (
 # Data for table "jadwal"
 #
 
-INSERT INTO `jadwal` VALUES ('J0001','Per 6 Bulan','rabu',3,'A0003','2017'),('J0002','Per 6 Bulan','rabu',3,'A0004','2017'),('J0003','Per 6 Bulan','kamis',3,'A0004','2017'),('J0004','Per 1 Minggu','senin',1,'A0002','2017');
+INSERT INTO `jadwal` VALUES ('J0001','Per 1 Bulan','senin',2,'A0001','2017');
 
 #
 # Structure for table "kerusakan"
@@ -90,18 +90,18 @@ INSERT INTO `jadwal` VALUES ('J0001','Per 6 Bulan','rabu',3,'A0003','2017'),('J0
 
 DROP TABLE IF EXISTS `kerusakan`;
 CREATE TABLE `kerusakan` (
-  `id_kerusakan` char(5) NOT NULL DEFAULT '',
+  `id_kerusakan` int(5) NOT NULL AUTO_INCREMENT,
   `nama_kerusakan` varchar(100) DEFAULT NULL,
   `deskripsi` varchar(1000) DEFAULT NULL,
   `status` varchar(255) NOT NULL DEFAULT 'belum diproses',
   PRIMARY KEY (`id_kerusakan`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 #
 # Data for table "kerusakan"
 #
 
-INSERT INTO `kerusakan` VALUES ('K0001','Kerusakan 1','Desc Kerusakan 1','belum diproses'),('K0002','Kerusakan 1','Deskripsi 1','belum diproses'),('K0003','Kerusakan 2','Deskripsi 2','belum diproses'),('K0004','Kerusakan 1','Deskripsi 1','belum diproses'),('K0005','Konslet','Beli Aja','belum diproses'),('K0006','Kerusakan 1','Servis 1','belum diproses'),('K0007','Kerusakan 2','','belum diproses');
+INSERT INTO `kerusakan` VALUES (9,'Kerusakan 1','Desc Kerusakan 1','');
 
 #
 # Structure for table "maintenance"
@@ -114,6 +114,7 @@ CREATE TABLE `maintenance` (
   `id_pegawai` varchar(255) DEFAULT NULL,
   `tgl_maintenance` varchar(255) DEFAULT NULL,
   `status` varchar(255) DEFAULT NULL,
+  `id_jadwal` char(5) DEFAULT NULL,
   PRIMARY KEY (`id_maintenance`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
@@ -121,7 +122,7 @@ CREATE TABLE `maintenance` (
 # Data for table "maintenance"
 #
 
-INSERT INTO `maintenance` VALUES ('M0001','2017-10-01','apw22','2017-10-03','servis');
+INSERT INTO `maintenance` VALUES ('M0001','2017-10-03','apw_maintenance','2017-10-20','servis','J0001'),('M0002','2017-10-03','admin1','2017-10-19','servis','J0001');
 
 #
 # Structure for table "pegawai"
